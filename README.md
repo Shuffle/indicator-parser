@@ -6,6 +6,44 @@ An IOC parser library written in Rust, made to handle multithreaded IOC manageme
 - Prototype multithreaded
 - Ensure it's FAST
 
+## Using it in Python
+```python
+pip install indicator-parser
+```
+
+```
+import indicator-parser
+
+types = ["urls", "ipv4s"]
+output = indicator-parser.parse("as10.0.0.10df1234 1.2.3.4 https://google.com", types)
+
+print(output)
+```
+
+Expected output:
+```
+########
+[{
+  "type": "ipv4",
+  "data": "10.0.0.10",
+  "internal": True,
+ },
+  {
+  "type": "ipv4",
+  "data": "1.2.3.4",
+  "internal": False,
+ },
+ {
+  "type": "url",
+  "data": "https://google.com"
+ },
+ {
+  "type": "domain",
+  "data": "google.com"
+ }
+]
+```
+
 ## Datatypes (asap)
 - IPv4
 - URL
@@ -19,7 +57,5 @@ An IOC parser library written in Rust, made to handle multithreaded IOC manageme
 
 ### Optimizing (long-term)
 - Process Trees: Specific sequences of process creation that indicate malicious behavior.
-
-Example: A process explorer.exe spawning cmd.exe and then powershell.exe
-Anomalous Activity: Unusual system or network activities, such as high CPU usage, unexpected network connections, or unusual file modifications.
+- CyberChef-related toolkit 
 
