@@ -17,9 +17,9 @@ func ParseDomain(value string) string {
 	return url.Host
 }
 
-func Parse[T any](value string, types []IndicatorType) []Indicator[T] {
+func Parse[T string](value string, types []IndicatorType) []Indicator[T] {
 	tokens := strings.FieldsFunc(value, func(c rune) bool {
-		//	// return !unicode.IsLetter(c) && !unicode.IsNumber(c)
+		//return !unicode.IsLetter(c) && !unicode.IsNumber(c)
 		return unicode.IsSpace(c)
 	})
 

@@ -75,7 +75,7 @@ func TestIsEmail(t *testing.T) {
 }
 
 func TestParse(t *testing.T) {
-	input := "https://example.com user@example.com 1.2.3.4 https://google.com/url/booo"
+	input := "https://example.com user@example.com 1.2.3.4 https://google.com/url/booo @user.com"
 	types := []IndicatorType{IPV4, URL_LINK, Domain, Email}
 
 	want := []Indicator[string]{
