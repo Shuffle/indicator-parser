@@ -16,7 +16,7 @@ import (
 	"log"
 	"os"
 
-	ioc "github.com/yashsinghcodes/indicator-parser/go/ioc"
+	ioc "github.com/Shuffle/indicator-parser/go/ioc"
 )
 
 var logger *log.Logger
