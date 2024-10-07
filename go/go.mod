@@ -1,3 +1,3 @@
-module github.com/yashsinghcodes/indicator-parser/go
+module github.com/Shuffle/indicator-parser/go
 
 go 1.22.5
